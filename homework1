@@ -41,26 +41,15 @@
                          sourceColumn: 4,
                          type: "string",
                          role: "annotation" },]);
-        var options1 = {
-          title: 'Nomial GDP from 2008 to 2018',
-          vAxis: {
-            title: 'Amount of dollars(USD)'
-          },
-          hAxis: {
-            title: 'Year(2008-2018)'
-          },
-          legend: {
-            position: 'bottom'
-          }
-        };
-        var options2 = {
+
+        var options = {
           title: 'Nomial GDP from 2008 to 2018',
           titleTextStyle: {
             color: 'black',
             fontSize: 20,
             fontName: 'CG Times'
           },
-          colors: ['silver', 'gray', 'black'],
+          colors: ['blue', 'gray', 'purple', 'orange'],
           vAxis: {
             title: 'Amount of dollars(USD)',
             titleTextStyle: {
@@ -88,10 +77,8 @@
             }
           }
         };
-        var chart1 = new google.visualization.ColumnChart(document.getElementById('chart_div1'));
-        chart1.draw(view, options1);
-        var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
-        chart2.draw(view, options2);
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(view, options);
       }
 
 
@@ -104,9 +91,8 @@
       <p>name: 박기쁨 (21700253)</p>
       <p>Introduction: This chart shows the Nominal GDP of Korea, Japan, China and USA from 2008 to 2018. It has been put together as a panoramic view of the GDP that has changed over the last decade. </p>
       <p>Data: The data is from a site called Economic Statistics System(ECOS). This is a measure of production activity within a country in dollars. (https://ecos.bok.or.kr/jsp/vis/world/index_k.jsp#/map)</p>
-      <p>Source code of this page: https://github.com/joypark88/Data-Visualization-class/blob/master/homework1<p>
+      <p>Source code of this page: https://github.com/HandongHCI/HandongHCI.github.io/blob/master/Courses/BarChartExample.html<p>
     </div>
-    <div id="chart_div1" style="max-width: 1200px; margin: auto; width: 1200px; height: 500px;"></div>
-    <div id="chart_div2" style="max-width: 1200px; margin: auto; width: 1200px; height: 500px; padding-top: 200px"></div>
+    <div id="chart_div" style="max-width: 1200px; margin: auto; width: 1200px; height: 500px;"></div>
   </body>
 </html>
