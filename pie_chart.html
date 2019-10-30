@@ -38,7 +38,7 @@
         legend: {
           position: 'labeled'},
         colors: ['#008000', '#ffbf00', '#FF0000','#4E6282', 'blue'], 
-        slices: { 3: {offset: 0.3}}, 
+        slices: { 3: {offset: 0.3}, 1: {offset: 0.1}}, 
         animation: {
             duration: 5000, // 1000 ms = 1 s
             startup: true,
@@ -48,7 +48,7 @@
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
         chart.draw(data, options);
-      };
+      }
     </script>
   </head>
   <body>
@@ -58,6 +58,7 @@
     <div id="piechart" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
+
 
 
 
