@@ -19,7 +19,6 @@
           // read a .csv file and save the data in arrayData variable
           var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
           // send arrayData to 'draw' function
-          alert('text');
           draw(arrayData);
         });
       };
@@ -30,15 +29,22 @@
         // 받아온 데이터를 변형시켜줌 
 
       var options = {
-        legend: 'none',
-        pieSliceText: 'label',
         title: 'the size of territory',
         titleTextStyle: {
           color: 'black',
           fontSize: 40,
           fontName: 'Arial'
           },
-        pieStartAngle: 100
+        pieStartAngle: 100, 
+        legend: {
+          position: 'labeled'},
+        colors: ['#008000', '#ffbf00', '#FF0000','#4E6282', 'blue'], 
+        slices: { 3: {offset: 0.3},}, 
+        animation: {
+            duration: 5000, // 1000 ms = 1 s
+            startup: true,
+            easing: 'out'
+          }
       };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
