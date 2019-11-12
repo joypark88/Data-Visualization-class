@@ -37,7 +37,7 @@
           fontName: 'Arial'
           },
         colors: ['#008000', '#ffbf00', '#FF0000','#4E6282', 'blue'], 
-        tooltip:{textStyle : {fontSize:12}, showColorCode : true}
+        tooltip:{isHtml: true, textStyle : {fontSize:12}, showColorCode : true}
       };
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
         chart.draw(data, options);
