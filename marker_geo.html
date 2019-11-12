@@ -36,13 +36,16 @@
           fontSize: 40,
           fontName: 'Arial'
           },
-        colors: ['#008000', '#ffbf00', '#FF0000','blue'], 
-        tooltip:{isHtml: true, textStyle : {fontSize:12}, showColorCode : true}
-        displayMode: 'markers'
+        
+        tooltip:{isHtml: true},
+        displayMode: 'markers',
+        colorAxis: {colors: ['green', 'blue']}
+
+       
       };
         var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
         chart.draw(data, options);
-      }
+      };
     </script>
   </head>
   <body>
