@@ -8,11 +8,11 @@
 
     <script type="text/javascript">
       google.charts.load('current', {
-        packages: ['map'], 'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'});
-       google.charts.setOnLoadCallback(drawMap); // (1) when the javascript is read, readFile function is launched first.
+        'packages': ['map'], 'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'});
+       google.charts.setOnLoadCallback(drawChart); // (1) when the javascript is read, readFile function is launched first.
       // (2) file is read, and the data is saved in arrayData
       // arrayData variable is sent to the function called 'draw'
-      function drawMap() {
+      function drawChart() {
         filename = "GPS_chart.csv";
         $.get(filename, function(csvString) {
           // read a .csv file and save the data in arrayData variable
@@ -45,8 +45,8 @@
   </head>
   <body>
     <div id="introduction" style="max-width: 800px; font-family: Verdana, Dotum; margin: auto; padding-bottom: 30px">
-      <h1>The location of the 7 biggest countries </h1>
-      <p>date: 2019-11-21</p>
+      <h1>Rate of the 5 biggest countries </h1>
+      <p>date: 2019-12-05</p>
       <p>name: 박기쁨 (21700253)</p>
       <p>Introduction: This chart shows the location of the coutries which is the biggest 7 country in the world.  </p>
       <p>Data: The data is from Wikipedia showing the territory size of all countries over the world (https://ko.wikipedia.org/wiki/%EB%A9%B4%EC%A0%81%EC%88%9C_%EB%82%98%EB%9D%BC_%EB%AA%A9%EB%A1%9D)</p>
